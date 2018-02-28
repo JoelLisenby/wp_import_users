@@ -2,7 +2,7 @@
 /*
 import_users() function
 
-Imports users first name, last name, email, title, role and optional phone, fax meta data and inserts the user into
+Imports users from a CSV file, with first name, last name, email, title, role and optional phone, fax meta data and inserts the user into
 the group name listed in the group col for the groups plugin.
 
 Group import is for itthinx Groups plugin. https://wordpress.org/plugins/groups/
