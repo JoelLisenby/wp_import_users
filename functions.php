@@ -45,6 +45,8 @@ function import_users($file_path) {
 		echo 'error opening file';
 	}
 }
-// uncomment the below to have the script run on page load.
-// import_users(get_stylesheet_directory().'/users_to_import.csv');
+// uncomment the below to have the script run on super admin page loads.
+// if(is_super_admin()) {
+// 	import_users(get_stylesheet_directory().'/users_to_import.csv');
+// }
 ?>
