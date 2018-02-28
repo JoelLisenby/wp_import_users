@@ -1,5 +1,12 @@
 <?php
 /*
+import_users() function
+
+Imports users first name, last name, email, title, role and optional phone, fax meta data and inserts the user into
+the group name listed in the group col for the groups plugin.
+
+Group import is for itthinx Groups plugin. https://wordpress.org/plugins/groups/
+
 Add this function to your functions.php file to have it run on a page load.
 
 Be sure to uncomment then recomment the function call as it will slow the site down while running
