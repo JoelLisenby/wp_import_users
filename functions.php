@@ -7,7 +7,8 @@ the group name listed in the group col for the groups plugin.
 
 Group import is for itthinx Groups plugin. https://wordpress.org/plugins/groups/
 
-Add this function to your functions.php file to have it run on a page load.
+Add this function to your functions.php file and uncomment the function call at the bottom to have it
+run if the current user is the super admin.
 
 Be sure to uncomment then recomment the function call as it will slow the site down while running
 and throw errors once the users have been imported.
