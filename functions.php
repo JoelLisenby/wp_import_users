@@ -34,13 +34,13 @@ function import_users($file_path) {
         );
         $user_id = wp_insert_user($user_data);
         if(is_numeric($user_id)) {
-          // use the below to insert the custom meta for the new user.
+          // add custom user meta
           /*
           update_user_meta($user_id, 'phone', $data[5]);
           update_user_meta($user_id, 'fax', $data[6]);
           */
 
-          // Use the below to add the user to the group in the group col, by group name.
+          // add user to group
           /*
           $group = Groups_Group::read_by_name($data[7]);
           Groups_User_Group::create(array('user_id' => $user_id, 'group_id' => $group->group_id));
