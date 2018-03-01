@@ -23,21 +23,21 @@ function import_users($file_path) {
       $user_id = null;
       $num = count($data);
       if($line > 0) { // skip first line headings
-        // example csv columns: first_name, last_name, email, title, phone, fax, role, group
+        // example csv columns: role,email,first_name,last_name,title,phone,fax,group
         $user_data = array(
-          'user_login' => sanitize_title($data[0].$data[1]),
-          'user_nicename' => $data[0].' '.$data[1],
-          'first_name' => $data[0],
-          'last_name' => $data[1],
-          'user_email' => $data[2],
-          'role' => $data[6]
+          'user_login' => sanitize_title($data[2].$data[3]),
+          'user_nicename' => $data[2].' '.$data[3],
+          'first_name' => $data[2],
+          'last_name' => $data[3],
+          'user_email' => $data[1],
+          'role' => $data[0]
         );
         $user_id = wp_insert_user($user_data);
         if(is_numeric($user_id)) {
           // use the below to insert the custom meta for the new user.
           /*
-          update_user_meta($user_id, 'phone', $data[4]);
-          update_user_meta($user_id, 'fax', $data[5]);
+          update_user_meta($user_id, 'phone', $data[5]);
+          update_user_meta($user_id, 'fax', $data[6]);
           */
 
           // Use the below to add the user to the group in the group col, by group name.
