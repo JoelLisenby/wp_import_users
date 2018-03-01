@@ -25,12 +25,12 @@ function import_users($file_path) {
       if($line > 0) { // skip first line headings
         // example csv columns: role,email,first_name,last_name,title,phone,fax,group
         $user_data = array(
-          'user_login' => sanitize_title($data[2].$data[3]),
-          'user_nicename' => $data[2].' '.$data[3],
+          'role' => $data[0],
+          'user_email' => $data[1],
           'first_name' => $data[2],
           'last_name' => $data[3],
-          'user_email' => $data[1],
-          'role' => $data[0]
+          'user_login' => sanitize_title($data[2].$data[3]),
+          'user_nicename' => $data[2].' '.$data[3]
         );
         $user_id = wp_insert_user($user_data);
         if(is_numeric($user_id)) {
