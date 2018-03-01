@@ -11,9 +11,9 @@ headings in the csv file.
 * **Custom Meta Data Columns:** phone, fax
 * **Group Column:** group
 
-```
-first_name,last_name,email,title,phone,fax,role,group
-John,Doe,john.doe@gmail.com,Employee,5555555555,5555555555,author,ACME Employees
+```csv
+role,email,first_name,last_name,title,phone,fax,group
+author,john.doe@gmail.com,John,Doe,Employee,5555555555,5555555555,ACME Employees
 ```
 ## Import Custom User Meta Data
 The function has the ability to add custom meta data to users ready to use by
